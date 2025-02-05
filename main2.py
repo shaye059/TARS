@@ -7,8 +7,10 @@ Answer: Let's think step by step."""
 
 prompt = ChatPromptTemplate.from_template(template)
 
-model = OllamaLLM(model="llama3.1:3b", base_url="http://172.20.144.1:11434")
+model = OllamaLLM(model="phi4", base_url="http://localhost:11434")
 
 chain = prompt | model
 
-chain.invoke({"question": "What is LangChain?"})
+response = chain.invoke({"question": "What is LangChain?"})
+
+print(response)

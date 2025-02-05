@@ -2,6 +2,9 @@ POST http://localhost:11434/api/generate HTTP/1.1
 content-type: application/json
 
 {
-    "model": "llama3.1:8b",
-    "prompt": "Why is the sky blue?"
+    "model": "phi4",
+    "prompt": "Why is the sky blue?",
+    "stream": false
   }
+
+  curl -X POST http://localhost:11434/api/generate -H "Content-Type: application/json" -d '{"model": "llama3.1:8b", "prompt": "Why is the sky blue?"}'
